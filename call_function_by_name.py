@@ -9,6 +9,6 @@ def addition(params):
     print(params['x'] + params['y'])
         
 def subtraction(params): 
-    print(params['x'] + params['y'])
+    print(params['x'] - params['y'])
 
 head_function('addition',{'x': 3, 'y': 5})
