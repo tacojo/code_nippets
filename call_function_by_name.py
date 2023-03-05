@@ -1,14 +1,14 @@
 def head_function(function_name,params):
     map_functions = { 
-        'func1': func1, 
-        'func1': func2 
+        'addition': addition, 
+        'subtraction': subtraction 
         }
     map_functions[function_name](params)
 
-def func1(params): 
-    print(10+params['id'])
+def addition(params): 
+    print(params['x'] + params['y'])
         
-def func2(params): 
-    print(20+params['id'])
+def subtraction(params): 
+    print(params['x'] + params['y'])
 
-head_function('func1',{'id':2})
+head_function('addition',{'x': 3, 'y': 5})
