@@ -6,7 +6,7 @@ def head_function(function_name,params):
     map_functions[function_name](params)
 
 def func1(params): 
-	print(10+params['id'])
+    print(10+params['id'])
         
 def func2(params): 
     print(20+params['id'])
