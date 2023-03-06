@@ -41,7 +41,7 @@ class MyDynamicFunctions():
         self.list_functions = list_functions
         self.params = params
 
-    def head_function(self, function_name, fn_params):
+    def head_function(self, function_name):
         map_functions = { 
             'addition': self.addition, 
             'subtraction': self.subtraction,
@@ -64,11 +64,11 @@ class MyDynamicFunctions():
 
     def run_list_of_functions(self):
         for fn in self.list_functions:
-            self.head_function(fn, self.params)      
+            self.head_function(fn)      
 
 list_functions_1 = ['addition','subtraction']
 list_functions_2 = ['multiply','divide']
 myparams =  {'x': 2, 'y': 15}
 
-a = MyDynamicFunctions(list_functions_1, myparams)
+a = MyDynamicFunctions(list_functions_2, myparams)
 a.run_list_of_functions()
