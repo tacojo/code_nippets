@@ -64,11 +64,12 @@ class MyDynamicFunctions():
 
     def run_list_of_functions(self):
         for fn in self.list_functions:
-            self.head_function(fn)      
+            self.head_function(fn)
 
 list_functions_1 = ['addition','subtraction']
 list_functions_2 = ['multiply','divide']
 myparams =  {'x': 2, 'y': 15}
 
-a = MyDynamicFunctions(list_functions_2, myparams)
+a = MyDynamicFunctions(list_functions_1, myparams)
 a.run_list_of_functions()
+a.multiply()
