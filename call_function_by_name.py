@@ -35,7 +35,19 @@ run_list_of_functions(list_functions_1, {'x': 3, 'y': 5})
 ###########################################################
 ################### Within a class ########################
 ###########################################################
-class MyDynamicFunctions:
+from dataclasses import dataclass
+from typing import List, Dict
+
+@dataclass
+class DynamicFunctionLoop:
+    function_name: List
+    fn_params: Dict
+
+    def run_list_of_functions(self):
+        for fn in self.list_functions:
+            head_function(fn, self.params)        
+
+class MyDynamicFunctions(DynamicFunctionLoop):
     def __init__(self, list_functions, params):
         self.list_functions = list_functions
         self.params = params
@@ -60,10 +72,6 @@ class MyDynamicFunctions:
             
     def divide(self): 
         print(self.params['x'] / self.params['y'])    
-
-    def run_list_of_functions(self):
-        for fn in self.list_functions:
-            head_function(fn, self.params)
 
 list_functions_1 = ['addition','subtraction']
 list_functions_2 = ['multiply','divide']
