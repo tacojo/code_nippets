@@ -64,7 +64,6 @@ class MyDynamicFunctions():
 
     def run_list_of_functions(self):
         for fn in self.list_functions:
-            #import pdb; pdb.set_trace()
             self.head_function(fn, self.params)      
 
 list_functions_1 = ['addition','subtraction']
