@@ -40,34 +40,34 @@ class MyDynamicFunctions:
         self.list_functions = list_functions
         self.params = params
 
-    def head_function(self, function_name, params):
+    def head_function(self, function_name, fn_params):
         map_functions = { 
             'addition': addition, 
             'subtraction': subtraction,
             'multiply': multiply,
             'divide': divide,
             }
-        map_functions[function_name](params)
+        map_functions[function_name](fn_params)
 
     def addition(self): 
-        print(params['x'] + params['y'])
+        print(self.params['x'] + self.params['y'])
             
     def subtraction(self): 
-        print(params['x'] - params['y'])
+        print(self.params['x'] - self.params['y'])
 
     def multiply(self): 
-        print(params['x'] * params['y'])
+        print(self.params['x'] * self.params['y'])
             
     def divide(self): 
-        print(params['x'] / params['y'])    
+        print(self.params['x'] / self.params['y'])    
 
     def run_list_of_functions(self):
-        for f in self.list_functions:
-            head_function(f, self.params)
+        for fn in self.list_functions:
+            head_function(fn, self.params)
 
 list_functions_1 = ['addition','subtraction']
 list_functions_2 = ['multiply','divide']
-params =  {'x': 2, 'y': 15}
+myparams =  {'x': 2, 'y': 15}
 
-a = MyDynamicFunctions(list_functions_1, params)
+a = MyDynamicFunctions(list_functions_1, myparams)
 a.run_list_of_functions()
